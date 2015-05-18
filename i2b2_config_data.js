@@ -9,8 +9,9 @@
 		  name: "HarvardDemo",
 		  urlCellPM: "http://localhost:8443/i2b2/services/PMService/",
 		  allowAnalysis: true,
-		  debug: false,
-		  "CAS_server": "https://localhost:8443/eurekaclinical-i2b2-integration-webapp"
+		  //installer: "/webclient/plugin_installer/",
+		  debug: false
+		  "CAS_server": "https://localhost:8443/cas-server/"
 		}
 	]
 	//-------------------------------------------------------------------------------------------
