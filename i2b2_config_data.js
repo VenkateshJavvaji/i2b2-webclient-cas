@@ -1,7 +1,6 @@
 {
 	urlProxy: "index.php",
-	urlFramework: "js-i2b2/",
-	startZoomed: true,
+    urlFramework: "js-i2b2/",
     casDomain: "i2b2demo",
 	//-------------------------------------------------------------------------------------------
 	// THESE ARE ALL THE DOMAINS A USER CAN LOGIN TO
