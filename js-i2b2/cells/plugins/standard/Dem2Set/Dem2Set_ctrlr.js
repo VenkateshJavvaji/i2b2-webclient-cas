@@ -126,11 +126,6 @@ i2b2.Dem2Set.getCounts = function(results,which) {
 	// collapse the hash objects to regular objects and save to the Plugin's data model
     //i2b2.Dem2Set.model.sumCounts[which] = eval("("+hData.toJSON()+")");
     i2b2.Dem2Set.model.sumCounts[which] = eval("(" + Object.toJSON(hData) + ")");
-<<<<<<< HEAD
-
-=======
-	
->>>>>>> Fixed issue. Apparently, i2b2 web client now uses a new version of the Prototype library, which no longer adds toJSON() to some objects. Thus, we switch we using Object.toJSON().
 	if (i2b2.Dem2Set.model.sumCounts[0] && i2b2.Dem2Set.model.sumCounts[1]) {
 		i2b2.Dem2Set.drawResults();
 	}
