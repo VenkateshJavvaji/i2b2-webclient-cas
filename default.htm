@@ -6,9 +6,9 @@
 <!--
  *  *************************
  *       i2b2 Web Client
- *           v1.7.12
+ *           v1.7.12a
  *  ************************* 
- *  @modified: 8/26/19
+ *  @modified: 5/1/20
  *  Contributors:
  *     Nick Benik
  *     Griffin Weber, MD, PhD
@@ -23,7 +23,7 @@
  */-->
 
 <script type="text/javascript">
-	var i2b2build = "1.7.12   [8/26/19 12:00 PM] ";
+	var i2b2build = "1.7.12a   [5/1/20 12:00 PM] ";
 </script>
 
 <!-- This turns off debugging messages. Developers - comment this out to turn them back on! -->
@@ -312,6 +312,11 @@ function initI2B2()
 				i2b2.PLUGINMGR.view.list.BuildCategories();
 				i2b2.PLUGINMGR.view.list.Render();
 				
+				// Drag the splitter to get the right labels on the left panel (jgk 12/19)
+				i2b2.ONT.view.main.splitterDragged();
+				i2b2.WORK.view.main.splitterDragged();
+				i2b2.CRC.view.history.splitterDragged();
+				
 			}
 			$('viewMode-Project').innerHTML = "Project: " + i2b2.PM.model.login_projectname;
 			$('viewMode-User').innerHTML = "User: " + i2b2.PM.model.login_fullname;
@@ -339,6 +344,7 @@ function init() {
 	// initialize the i2b2 framework
 	initI2B2();
 	initI2B2_UI();
+	
 }
 YAHOO.util.Event.addListener(window, "load", init);
 
@@ -430,7 +436,7 @@ YAHOO.util.Event.addListener(window, "load", init);
     <td align="right" valign="middle"><div id="viewMode-User"></div></td>
     <td align="right" valign="middle"><div id="topBar"> 
             <span id="menuLogin">
-           WebClient v1.7.12 &nbsp;|&nbsp; <a id="helpLink" href="Javascript:void(0)" onClick="i2b2.hive.HelpViewer.show();">Help</a>
+           WebClient v1.7.12a &nbsp;|&nbsp; <a id="helpLink" href="Javascript:void(0)" onClick="i2b2.hive.HelpViewer.show();">Help</a>
       		</span>
         <!--        <form name="projectsForm" style="margin: 0pt; padding: 0pt;" onSubmit="i2b2.PM.selectProject(); return false;">
 		<select style="font-size:11px;float:left;" onChange="i2b2.PM.view.modal.projectDialog.loadProject()" name="projects" id="loginProjs2"></select>
